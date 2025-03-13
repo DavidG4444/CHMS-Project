@@ -13,13 +13,13 @@ import { UserFormValidation } from "@/lib/validation"
 import { useRouter } from "next/router"
 
 export enum FormFieldType {
-  INPUT = 'input'
-  TEXTAREA = 'textarea'
-  PHONE_INPUT = 'phoneinput'
-  CHECKBOX = 'checkbox'
-  DATE_PICKER = 'datePicker'
-  SELECT = 'select'
-  SKELETON = 'skeleton'
+  INPUT='input'
+  TEXTAREA='textarea'
+  PHONE_INPUT='phoneinput'
+  CHECKBOX='checkbox'
+  DATE_PICKER='datePicker'
+  SELECT='select'
+  SKELETON='skeleton'
 
 }
 const PatientForm = () => {
@@ -42,11 +42,11 @@ const PatientForm = () => {
    setIsLoading(true);
 
    try {
-    //const userData = { name , email , phone};
+    const userData = { name , email , phone};
 
-    //const user = await createUser(userData);
+    const user = await createUser(userData);
 
-    //if (user) router.push(`/patients/${user.$id}/register`)
+    if (user) router.push(`/patients/${user.$id}/register`)
    } catch (error) {
      console.log(error);
    }
